@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "author": "Liga Haddaf",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 115.8, "left": -10.2, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -80.4,
+      "left": 205.4,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -70.8,
+      "left": -73,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 24,
+      "left": 201.05,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 23.15,
+      "left": 48,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 380.6,
+      "left": 67.2,
+      "rotate": 90,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 373.8,
+      "left": 166.2,
+      "rotate": 90,
+      "attrs": { "color": "red", "xray": "1" }
+    }
+  ],
+  "connections": [
+    [ "led1:A", "r1:1", "red", [ "v0" ] ],
+    [ "r2:1", "led2:A", "green", [ "h0" ] ],
+    [ "led2:C", "uno:GND.1", "black", [ "v134.4", "h38.5" ] ],
+    [ "led1:C", "uno:GND.1", "black", [ "v115.2", "h-38.3" ] ],
+    [ "btn2:1.l", "uno:2", "red", [ "h105.6", "v-240" ] ],
+    [ "btn2:2.l", "uno:GND.2", "black", [ "v-19.2", "h-32.9" ] ],
+    [ "btn1:1.l", "uno:4", "green", [ "h291", "v-275.6", "h-195.9" ] ],
+    [ "btn1:2.l", "uno:GND.2", "black", [ "v-35.6", "h66.1" ] ],
+    [ "r1:2", "uno:8", "red", [ "h0" ] ],
+    [ "r2:2", "uno:10", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
